@@ -14,4 +14,7 @@ export class ButtonComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  clickEvent() {
+    console.log(this.label);
+  }
 }

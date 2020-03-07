@@ -14,6 +14,44 @@
       "sourceRoot": "src",
       "prefix": "app",
       "architect": {
+        "build-elements": {
+          "builder": "ngx-build-plus:build",
+          "options": {
+            "outputPath": "dist",
+            "main": "src/main-elements.ts",
+            "index": "src/index.html",
+            "tsConfig": "tsconfig.element.json",
+            "assets": [],
+            "styles": [],
+            "stylePreprocessorOptions": {
+              "includePaths": []
+            },
+            "scripts": [],
+            "aot": true,
+            "es5BrowserSupport": false,
+            "singleBundle": true,
+            "configHook": "~webpack-config-hook.js"
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+            }
+          }
+        },
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {

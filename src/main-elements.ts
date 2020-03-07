@@ -1,4 +1,6 @@
-import './custom-elements-polyfills';
+import '@webcomponents/custom-elements';
+// ES5形式のコードをそのまま使う
+import '@webcomponents/webcomponentsjs/custom-elements-es5-adapter';
 import 'zone.js/dist/zone.js';
 
 import { enableProdMode, Injector } from '@angular/core';

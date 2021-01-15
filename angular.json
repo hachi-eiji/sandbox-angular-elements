@@ -28,7 +28,6 @@
             },
             "scripts": [],
             "aot": true,
-            "es5BrowserSupport": false,
             "singleBundle": true,
             "configHook": "~webpack-config-hook.js"
           },
